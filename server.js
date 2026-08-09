@@ -87,5 +87,5 @@ app.post('/api/login', async (req, res) => {
 
 // Start the server
 app.listen(PORT, () => {
-    console.log(`Server running smoothly on http://localhost:${PORT}`);
+    console.log(`Server running smoothly on http://0.0.0.0:${PORT}`);
 });
