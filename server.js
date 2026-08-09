@@ -6,8 +6,8 @@ const path = require('path');
 const app = express();
 
 mongoose.connect(process.env.MONGO_URI)
-mongoose.connect(process.env.MONGO_URI)
-mongoose.connect(process.env.MONGO_URI)
+
+
 
 
 
@@ -16,10 +16,13 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Connect to MongoDB (local database named 'userDB')
-mongoose.connect('mongoose.connect(process.env.MONGO_URI)
-/userDB')
-    .then(() => console.log('Successfully connected to MongoDB.'))
+// Correct connection line
+mongoose.connect(process.env.MONGO_URI)
+    .then(() => console.log('Successfully connected to MongoDB Atlas.'))
     .catch(err => console.error('MongoDB connection error:', err));
+
+
+
 
 // Define User Schema and Model
 const userSchema = new mongoose.Schema({
