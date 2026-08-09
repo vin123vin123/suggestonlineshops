@@ -29,13 +29,14 @@ mongoose.connect(process.env.MONGO_URI)
 
 
 
-// Define User Schema and Model
+// Define User Schema and force the target collection name
 const userSchema = new mongoose.Schema({
     userId: { type: String, required: true, unique: true },
     password: { type: String, required: true }
-});
+}, { collection: 'users' }); // ⬅️ Forces Mongoose to use 'users' instead of raw automatic naming
 
 const User = mongoose.model('User', userSchema);
+
 
 // API Route: Sign Up
 app.post('/api/signup', async (req, res) => {
