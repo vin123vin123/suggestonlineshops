@@ -6,6 +6,9 @@ const path = require('path');
 const app = express();
 
 mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI)
+
 
 
 // Middleware
@@ -13,7 +16,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Connect to MongoDB (local database named 'userDB')
-mongoose.connect('mongodb://localhost:27017/userDB')
+mongoose.connect('mongoose.connect(process.env.MONGO_URI)
+/userDB')
     .then(() => console.log('Successfully connected to MongoDB.'))
     .catch(err => console.error('MongoDB connection error:', err));
 
